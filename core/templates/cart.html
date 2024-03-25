@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section id="page-header" class="about-header">
+  <h2>#CART</h2>
+  <p>Enter your coupon code...</p>
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+</section>
+
+<!-- <section id="contact-details" class="section-p1">
+    <div class="details">
+        <h2>Your Cart is Empty</h2>
+</section> -->
+
+<!-- cart items details-->
+<div class="small-container">
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+    <tr>
+      <td>
+        <div class="cart-info">
+          <img src="{% static 'images/products/f1.jpg' %}" alt="Tshirt" />
+          <div>
+            <p>Orange Printed Tshirt</p>
+            <small>Price: $78.00</small>
+            <br />
+            <a href="#">Remove</a>
+          </div>
+        </div>
+      </td>
+      <td><input type="number" value="1" /></td>
+      <td>$78.00</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="cart-info">
+          <img src="{% static 'images/products/f3.jpg' %}" alt="Tshirt" />
+          <div>
+            <p>Orange Printed Tshirt</p>
+            <small>Price: $78.00</small>
+            <br />
+            <a href="#">Remove</a>
+          </div>
+        </div>
+      </td>
+      <td><input type="number" value="1" /></td>
+      <td>$78.00</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="cart-info">
+          <img src="{% static 'images/products/f5.jpg' %}" alt="Tshirt" />
+          <div>
+            <p>Orange Printed Tshirt</p>
+            <small>Price: $78.00</small>
+            <br />
+            <a href="#">Remove</a>
+          </div>
+        </div>
+      </td>
+      <td><input type="number" value="1" /></td>
+      <td>$78.00</td>
+    </tr>
+  </table>
+
+  <div class="total-price">
+    <table>
+      <tr>
+        <td>Subtotal</td>
+        <td>$234.00</td>
+      </tr>
+      <tr>
+        <td>Tax</td>
+        <td>$35.00</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td>$269.00</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<section id="form-details">
+  <form action="">
+    <span>Leave a Message</span>
+    <h2>We love to hear from you</h2>
+    <input type="text" placeholder="Enter your name" />
+    <input type="text" placeholder="Enter your Email" />
+    <input type="text" placeholder="Enter your Subjext" />
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="Your Message"
+    ></textarea>
+    <button class="normal">Submit</button>
+  </form>
+
+  <div class="people">
+    <div>
+      <img src="{% static 'images/people/1.png' %}" alt="" />
+      <p>
+        <span>John Doe</span> Senior Marketing Manager <br />
+        Phone: +91 1234567890 <br />
+        Email: contact@example.com
+      </p>
+    </div>
+    <div>
+      <img src="{% static 'images/people/2.png' %}" alt="" />
+      <p>
+        <span>John Doe</span> Senior Marketing Manager <br />
+        Phone: +91 1234567890 <br />
+        Email: contact@example.com
+      </p>
+    </div>
+    <div>
+      <img src="{% static 'images/people/3.png' %}" alt="" />
+      <p>
+        <span>Jean Doe</span> Senior Marketing Manager <br />
+        Phone: +91 1234567890 <br />
+        Email: contact@example.com
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+    <h4>Sign Up for newsletter</h4>
+    <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
+  </div>
+  <div class="form">
+    <input type="text" placeholder="your email address" />
+    <button class="normal">Sign Up</button>
+  </div>
+</section>
+
+
+{% endblock %}
+
+
+ 

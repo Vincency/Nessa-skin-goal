@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<div class="top">
+
+			<h4>Login</h4>
+			<form method="post">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button class="submit-btn" type="submit">Login</button>
+			</form>
+
+			
+			<div class="dif">
+				<div class="forgot">
+					<a href="#">Forgot password?</a>
+				</div>
+			</div>
+		</div>
+		<div class="signup">
+			<p>Don't have an account? <a href="signup">Sign up</a></p>
+		</div>
+
+	
+
+	</div>
+
+</div>
+
+</body>
+
+{% endblock %}

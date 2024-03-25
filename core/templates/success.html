@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section>
+    <div>
+        <div class="success-container">
+            <h2 class="success-header">Your Purchase was Successful!</h2>
+            <p class="success-message">
+                we've received your order and will begin processing shortly. Here's your payment ID: {{payment.ref}}
+            </p>
+        </div>
+        <a href="{% url 'home' %}" class="home-btn">Back to Home</a>
+    </div>
+</section>
+
+
+{% endblock %}

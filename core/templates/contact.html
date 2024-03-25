@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+    <section id="page-header" class="about-header">
+        <h2>Contact Us</h2>
+        <p> Leave a message. We would love to hear from you....</p>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit us or Contact us</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <p><strong>Address:</strong> Ozomagala by leventis Junction,
+                        Opposite Susu School Onitsha, Anambra State.</p>
+                </li>
+                <li>
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <p style="color: red;"><strong>Email:</strong> @gmail.com</p>
+                </li>
+                <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p><strong>Phone Number:</strong> 08130663364</p>
+                </li>
+                <li>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p><strong>Office Timing:</strong> 8am to 6pm</p>
+                </li>
+            </div>
+        </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79028.82705994546!2d-1.316122463070348!3d51.75770789023402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2sUniversity%20of%20Oxford!5e0!3m2!1sen!2sin!4v1665512781798!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+    </section>
+ 
+    <section id="form-details">
+        <form action="">
+            <span>Leave a Message</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your Email">
+            <input type="text" placeholder="Enter your Subjext">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="normal">Submit</button>
+        </form>
+
+        <div class="people">
+            <div>
+                <img src="{% static 'images/people/1.png' %}" alt="">
+                <p><span>John Doe</span> Senior Marketing Manager <br> Phone: +91 1234567890 <br> Email: contact@example.com</p>
+            </div>
+            <div>
+                <img src="{% static 'images/people/2.png' %}" alt="">
+                <p><span>John Doe</span> Senior Marketing Manager <br> Phone: +91 1234567890 <br> Email: contact@example.com</p>
+            </div>
+            <div>
+                <img src="{% static 'images/people/3.png' %}" alt="">
+                <p><span>Jean Doe</span> Senior Marketing Manager <br> Phone: +91 1234567890 <br> Email: contact@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign uP for newsletters</h4>
+            <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+
+{% endblock %}

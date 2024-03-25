@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+<!-- section new -->
+<section class="hero">
+
+    <div class="hero-left">
+        <h2 class="hero-h2">Reveal The</h2>
+        <h2 class="hero-h2">Beauty In You</h2>
+        <p class="hero-text">Made using clean, non-toxic ingredients. 
+            we have products uniquely designed for every skin.
+        </p>
+
+        <a class="shop-btn">Shop Now</a>
+    </div>
+
+    <div class="hero-right">
+        <img src="{% static 'images/img2.png' %}" alt="" class="hero-img">
+    </div>
+    
+    <a href="#" class="to-top">
+        <p class="to-top--title">BACK <br> TO TOP</p>
+    </a>
+
+
+</section>
+
+
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection</p>
+    <div class="pro-container">
+
+        {% for item in object_list %}
+            <div class="pro">
+                <a href="{{ item.get_absolute_url }}">
+                    <img src="{{ item.image.url }}" alt="">
+                    <div class="des">
+                        <span>{{ item.title }}</span>
+                        <h5>{{ item.description }}</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                        <h4 class="">
+                            {% if item.discount_price %}
+                            <span class="">
+                                <del>&#x20a6; {{ item.price }}</del>
+                            </span>
+                            <span>&#x20a6; {{ item.discount_price }}</span>
+                            {% else %}
+                            <span>&#x20a6; {{ item.price }}</span>
+                            {% endif %}
+                        </h4>
+                        
+                    </div>
+                    <a href="cart" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                </a>
+            </div>
+
+
+            {% endfor %}
+        <div class="pro">
+            <img src="{% static 'images/products/f1.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>&#x20a6;78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f2.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>&#x20a6;78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f3.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>&#x20a6;78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f4.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f5.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f6.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f7.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/f8.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        
+    </div>
+
+</section>
+
+<section id="banner" class="section-m1">
+    <h4>Let's Glow Together</h4>
+    <h2>Up to <span>70% Off</span>- All Products & Accessories</h2>
+    <button class="normal">Explore More</button>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Summer Collection</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="{% static 'images/products/n1.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n2.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n3.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n4.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n5.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n6.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n7.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+            <img src="{% static 'images/products/n8.jpg' %}" alt="">
+            <div class="des">
+                <span>Adiddas</span>
+                <h5>Cotton shirts pure cotton</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        </div>
+        
+    </div>
+
+</section>
+
+<section id="sm-banner" class="section-p1">
+    <div class="banner-box ">
+        <h4>Crazy Deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>Lorem ipsum dolor sit amet consectetur.</span>
+        <button class="white">Learn more</button>
+    </div>
+
+    <div class="banner-box banner-box2">
+        <h4>Spring Summer</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>Lorem ipsum asdasdasdasd.</span>
+        <button class="white">Learn more</button>
+    </div>
+    
+   
+</section>
+
+<section id="banner3">
+    <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection</h3>
+    </div>
+    <div class="banner-box banner-box2">
+        <h2>SEASONAL</h2>
+        <h3>Winter Collection</h3>
+    </div>
+    <div class="banner-box banner-box3">
+        <h2> SALE</h2>
+        <h3>Winter Collection</h3>
+    </div>
+</section>
+
+
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="{% static 'images/features/f1.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/features/f2.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/features/f3.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/features/f4.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/features/f5.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/features/f6.png' %}" alt="">
+        <h6>Lorem, ipsum.</h6>
+    </div>
+</section>
+
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign uP for newsletters</h4>
+        <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+
+
+{% endblock %}

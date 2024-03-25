@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <h2>Hello You are about to pay for {{item_amount}} Products and the total cost is NGN{{total_cost}}</h2>
+</div>
+<button onclick="payWithPaystack()" class="payment-btn">Proceed to Payment</button>
+
+
+<script>
+    function payWithPaystack() {
+        let currency = 'NGN';
+        let plan = '';
+        let ref = '{{payment.ref}}'
+        let amount = '{{payment.amount}}';
+        let obj = {
+            key: '{{paystack_pub_key}}',
+            email: '{{payment.email}}',
+            amount: '{{amount_value}}',
+            ref:ref,
+            callback: function (response) {
+                windows.location.href = "{% url 'verify_payment' payment.ref %}";
+            },
+        };
+        if (Boolean(currency)) {
+            obj.currency = currency.toLocaleUpperCase();
+        }
+        if (Boolean(plan)) {
+            obj.plan = plan;
+        }
+        var handler = PaystackPop.setup(obj);
+        handler.openIframe();
+    }
+</script>
+
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <main class="">
+    <div class="">
+
+      <div class="item-info-container">
+
+        <div class="info-image">
+          <img src="{{ item.image.url }}" class="detail-image" alt="Product image" >
+        </div>
+        
+          <!--Content-->
+        <div class="info-details">
+
+        <h3 class="item-name">{{ item.title }}</h3>
+
+          <p class="price-item">
+            {% if object.discount_price %}
+            <span class="price-item">
+              <del>&#x20a6;{{ object.price }}</del>
+            </span>
+            <span class="price-item">&#x20a6;{{ object.discount_price }}</span>
+            {% else %}
+            <span class="price-item">&#x20a6;{{ object.price }}</span>
+            {% endif %}
+          </p>
+
+            {% if item.description %}
+            <p class="item-description">
+                <strong class="description">Description:</strong> <br>
+                {{object.description}}
+            </p>
+            {% endif %}
+
+            <a href="{{ object.get_add_to_cart_url }}" class="contact-btn">
+              Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </a>
+            <a href="{{ object.get_remove_from_cart_url }}" class="contact-btn">
+              Remove from cart
+            </a>
+
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="container">
+        <h2 class="container-text">Related Items</h2>
+    
+        <div class="related-item-display">
+            {% if related_items %}
+                {% for item in related_items %}
+                    <div class="item-container">
+                        <a href="{{ item.get_absolute_url }}">
+                            <div>
+                                <img src="{{ item.image.url }}" class ="item-img">
+                            </div>
+                            <div class="item-details">
+                              <h3 class="">{{ item.title }}</h3>
+                                <p class="related-item-price">Price: &#x20a6;{{ item.price }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No related items found.</p>
+            {% endif %}
+    
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+{% endblock content %}

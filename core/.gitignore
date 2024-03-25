@@ -1,0 +1,10 @@
+db.sqlite3
+sqlite3
+
+configuration files
+
+.idea/
+*.iml
+*.pyc
+
+local_settings.py

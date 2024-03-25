@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+  <div class="checkout-container">
+    <h2 class="checkout-title">Checkout form</h2>
+
+    <div class.checked-container>
+
+      <div class="card">
+
+        <h3>Shipping address</h3>
+
+        <form method="POST" class="card-body">
+          {% csrf_token %}
+          
+          {% for field in form %}
+              {% if field.name == 'save_info' or field.name == 'payment_option' %}
+                  <div class="form-check">
+                      {{ field }}
+                      <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                  </div>
+              {% else %}
+                  {% if field.name == 'country' %}
+                      <div class="form-group">
+                          {{ field.label_tag }}
+                          {{ field }}
+                      </div>
+                  {% else %}
+                      <div class="form-group">
+                          {{ field.label_tag }}
+                          {% if field.name == 'state' %}
+                              <select class="form-control nigerian-state-select" name="{{ field.name }}" id="{{ field.id_for_label }}">
+                                  <option value="">Select State</option>
+                                  {% for value, label in field.field.choices %}
+                                      <option value="{{ value }}">{{ label }}</option>
+                                  {% endfor %}
+                              </select>
+                          {% else %}
+                              {{ field }}
+                          {% endif %}
+                          {% if field.errors %}
+                              <div class="alert alert-danger" role="alert">
+                                  {{ field.errors }}
+                              </div>
+                          {% endif %}
+                      </div>
+                  {% endif %}
+              {% endif %}
+          {% endfor %}
+      
+          <hr class="mb-4">
+          <button class="checkout-btn" type="submit">Continue to checkout</button>
+      </form>
+      
+
+      </div>
+
+      <div class="col-md-4 mb-4">
+        {% include "order_snippet.html" %}
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+{% endblock content %}

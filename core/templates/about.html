@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+<body>
+    
+    <section id="page-header" class="about-header">
+        <h2>#Know Us</h2>
+        <p>KNOW US Lorem ipsum dolor sit amet consectetu</p>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </section>
+  
+    <section id="about-head" class="section-p1">
+        <img src="{% static 'images/img4.png' %}" alt="" style="height: 500px;" class="about-image">
+        <div>
+            <h2 class="about-h2">Who we are</h2>
+            <p class="about-p">Welcome to Nessa Skin Goal, where beauty meets science and expertise blends seamlessly with 
+                care. We are not just a skincare brand; we are your trusted partners on the journey to healthier,
+                 radiant skin. At Nessa Skin Goal, we understand that each skin is unique and deserves personalized
+                  attention. With years of experience and a passion for skincare, we have crafted a range of products
+             that cater to all your skin concerns, from acne to eczema, from pigmentation to black spots.</p>
+            
+             <p class="about-p">
+                Our team comprises dedicated skincare specialists, researchers, and beauty enthusiasts, all driven by
+                 a common goal: to empower individuals to feel confident in their skin. We believe
+                 that skincare is not just about superficial beauty but also about nurturing and
+                  restoring your skin's natural health and vitality.
+             </p>
+             <br>
+            
+            <a href="" class="shop-btn">Shop Now</a>
+
+            <br><br><br>
+
+            <marquee bgcolor="#ccc" loop="-5"  scrollamount="10" width="100%"> Enjoy Up to 70% Off - All Products & Accessories</marquee>
+        </div>
+    </section>
+
+    
+    <section id="about-head" class="section-p1">
+        <div>
+            <h2 class="about-h2">Our Mission</h2>
+            <p class="about-p">Our mission at Nessa Skin Goal is simple yet profound: to provide effective skincare 
+                solutions that repair, restore, and maintain healthy skin for everyone. We strive to harness the latest
+                 advancements in skincare science while remaining true to our commitment to using safe, natural ingredients.
+                  Through our products and expertise, 
+                we aim to educate and empower individuals to embrace their unique skin journey with confidence and grace.
+            </p>
+            
+            <br>
+        </div>
+        <img src="{% static 'images/img5.png' %}" alt="" style="height: 500px; margin-left: 50px; " class="about-image">
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="{% static 'images/img6.png' %}" alt="" style="height: 500px;" class="about-image">
+        <div>
+            <h2 class="about-h2">Our Vision</h2>
+            <p class="about-p">At Nessa Skin Goal, we envision a world where skincare is not just a routine but a transformative experience—a 
+                journey of self-discovery and self-care. We aspire to be the guiding light for those navigating the complexities of 
+                skincare, offering not just products but also knowledge, support, and inspiration. Our vision is to redefine beauty 
+                standards by promoting skin health and self-love, one radiant complexion at a time.
+            </p>
+
+            <p>Join us on this exhilarating quest for healthier, happier skin. Together, let's unlock the true potential of your skin
+                 and embark on a journey towards your ultimate skin goals.</p>
+            
+            <br>
+        </div>
+        
+    </section>
+
+
+    
+    <!-- <section id="about-app" class="section-padding">
+        <h2>Download Our <a href="#">app</a> </h2>
+        <div class="video">
+            <video autoplay muted loop src="img/about/1.mp4"></video>
+        </div>
+    </section> -->
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f1.png" alt="">
+            <h6>Lorem ipsum</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f2.png" alt="">
+            <h6>Lorem, ipsum.</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f3.png" alt="">
+            <h6>Lorem, ipsum.</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f4.png" alt="">
+            <h6>Lorem, ipsum.</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f5.png" alt="">
+            <h6>Lorem, ipsum.</h6>
+        </div>
+        <div class="fe-box">
+            <img src="{% static 'images/features' %}/f6.png" alt="">
+            <h6>Lorem, ipsum.</h6>
+        </div>
+    </section>
+
+
+
+    <section >
+        <div>
+
+            <h2 class="">Frequently Asked Questions</h2>
+   
+            <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">Is skin care Unisex?</div>
+                <div class="accordion-content">
+                <p>Skin care is gender neutral, everyone deserves abeautiful and healthy skin.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Is Sun screen compulsory?</div>
+                <div class="accordion-content">
+                <p>Yes, wearing Sunscreen on a daily basis is essential as it protects your skin from sun sensitivity that might cause a skin damage.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">What happens when I stop using skincare products?</div>
+                <div class="accordion-content">
+                <p>Your skin will likely return to its natural state or what is often referred to as it's "baseline" condition.</p>
+                </div>
+            </div>
+            </div>
+            
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+    
+        accordionItems.forEach(item => {
+          const header = item.querySelector('.accordion-header');
+          header.addEventListener('click', function() {
+            item.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+    
+        </div>
+        
+    </section>
+
+    
+{% endblock %}
