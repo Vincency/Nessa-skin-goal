@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_countries',
     'paystackapi.paystack',
-    # 'paystack'
 
     'core',
 ]

@@ -392,7 +392,7 @@ body {
 
 #product1 .pro {
   width: 255px;
-  height: 370px;
+  height: 390px;
   padding: 10px;
   border: 1px solid #000;
   border-radius: 25px;
@@ -453,9 +453,9 @@ body {
 }
 
 #product1 .pro .des h4 span {
-  padding: 7px 0;
+  padding-top: 7px;
   padding-right: 10px;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
   color: #f90dd5;
 }
